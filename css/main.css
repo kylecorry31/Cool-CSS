@@ -158,6 +158,45 @@ footer p {
   font-family: Helvetica, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.6); }
 
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: table; }
+
+.table thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+.table tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+.table th {
+  padding: 6px;
+  border: 2px solid white;
+  text-align: center;
+  background: black;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase; }
+
+.table td {
+  padding: 6px;
+  border: 2px solid white;
+  text-align: center; }
+
+.table tbody tr:nth-child(odd) {
+  background-color: #ccc; }
+
+.table tbody tr:nth-child(even) {
+  background-color: #eee; }
+
 body,
 html {
   margin: 0;
