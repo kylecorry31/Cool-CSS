@@ -10,11 +10,12 @@ $navbar-fancy-line-height: 1.6em;
 $navbar-font-stack: $font-stack;
 $navbar-fancy-font-stack: $font-stack;
 $navbar-background-color: transparent;
-$navbar-link-location: space-between;
+$navbar-content-location: space-between;
 $navbar-link-margin: 24px;
 $navbar-direction: row wrap;
 $navbar-title-font-size: 24px;
 $navbar-title-font-color: black;
+$navbar-link-location: flex-end;
 .navbar {
     background-color: $navbar-background-color;
     z-index: 1;
@@ -22,7 +23,7 @@ $navbar-title-font-color: black;
     min-height: $navbar-min-height;
     display: flex;
     align-items: center;
-    justify-content: $navbar-link-location;
+    justify-content: $navbar-content-location;
     flex-flow: $navbar-direction;
 }
 
@@ -63,12 +64,19 @@ $navbar-title-font-color: black;
 .navbar .navbar-title {
     font-size: $navbar-title-font-size;
     padding-right: 4 * $navbar-link-margin;
-    justify-content: flex-start;
     color: $navbar-title-font-color;
+    fkex-grow: 1;
     &:hover {
         border-color: transparent;
         color: $navbar-title-font-color !important;
     }
+}
+
+.navbar-links {
+    display: flex;
+    align-content: center;
+    justify-content: $navbar-link-location;
+    flex-grow: 1;
 }
 
 .navbar-column .navbar-title {
@@ -77,7 +85,7 @@ $navbar-title-font-color: black;
 
 .navbar-fancy a {
     line-height: $navbar-fancy-line-height;
-    height: $navbar-fancy-line-height;
+    min-height: $navbar-fancy-line-height;
     letter-spacing: 2px;
     display: inline-block;
     font-weight: 600;
