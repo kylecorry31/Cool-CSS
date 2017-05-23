@@ -1,7 +1,7 @@
 $bottom-border-size: 1px !default;
 $bottom-border-color: rgba(86, 86, 86, 0.15) !default;
-$font-stack: Helvetica,
-Arial,
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+$font-stack: 'Montserrat',
 sans-serif !default;
 @import "hero";
 @import "full-header";
