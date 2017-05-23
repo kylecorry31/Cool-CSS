@@ -8,7 +8,8 @@ sans-serif;
 @import "navbar";
 @import "buttons";
 @import "footer";
-@import "layout-grid/mdc-layout-grid";
+@import url(elevation/mdc.elevation.min.css);
+@import url(layout-grid/mdc.layout-grid.min.css);
 body,
 html {
     margin: 0;
@@ -28,4 +29,8 @@ a {
 a:hover {
     text-decoration: none;
     color: #005280;
+}
+
+.circle {
+    border-radius: 100%;
 }
