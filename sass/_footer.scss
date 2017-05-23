@@ -1,8 +1,8 @@
-$footer-background-color: white;
-$footer-padding: 16px;
-$footer-font-size: 12px;
-$footer-font-color: rgba(0, 0, 0, 0.6);
-$footer-font-stack: $font-stack;
+$footer-background-color: white !default;
+$footer-padding: 16px !default;
+$footer-font-size: 12px !default;
+$footer-font-color: rgba(0, 0, 0, 0.6) !default;
+$footer-font-stack: $font-stack !default;
 footer {
     background-color: $footer-background-color;
     padding: $footer-padding;

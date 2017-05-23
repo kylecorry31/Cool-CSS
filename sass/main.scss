@@ -1,8 +1,8 @@
-$bottom-border-size: 1px;
-$bottom-border-color: rgba(86, 86, 86, 0.15);
+$bottom-border-size: 1px !default;
+$bottom-border-color: rgba(86, 86, 86, 0.15) !default;
 $font-stack: Helvetica,
 Arial,
-sans-serif;
+sans-serif !default;
 @import "hero";
 @import "full-header";
 @import "navbar";

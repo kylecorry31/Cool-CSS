@@ -1,12 +1,12 @@
-$button-font-size: 12px;
-$button-padding-top-bottom: 13px;
-$button-padding-left-right: 26px;
-$button-margin: 8px;
-$button-font-color: black;
-$button-background-color: white;
-$button-hover-font-color: white;
-$button-hover-background-color: black;
-$button-ghost-hover-font-color: white;
+$button-font-size: 12px !default;
+$button-padding-top-bottom: 13px !default;
+$button-padding-left-right: 26px !default;
+$button-margin: 8px !default;
+$button-font-color: black !default;
+$button-background-color: white !default;
+$button-hover-font-color: white !default;
+$button-hover-background-color: black !default;
+$button-ghost-hover-font-color: white !default;
 .button {
     padding: $button-padding-top-bottom $button-padding-left-right;
     font-size: $button-font-size;

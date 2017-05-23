@@ -1,12 +1,13 @@
-$hero-height: 360px;
-$hero-width: 100%;
-$hero-background: rgba(0, 0, 0, 0.2);
+$hero-height: 360px !default;
+$hero-width: 100% !default;
+$hero-background: rgba(0, 0, 0, 0.2) !default;
+$hero-flow-direction: row wrap !default;
 
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: $hero-flow-direction;
     width: $hero-width;
     height: $hero-height;
     background: $hero-background;
