@@ -1,10 +1,16 @@
-$table-header-background-color: black;
-$table-border-color: white;
-$table-border-width: 2px;
-$table-heading-align: center;
-$table-data-align: center;
-$table-even-row-background-color: #eee;
-$table-odd-row-background-color: #ccc;
+$table-header-background-color: black !default;
+$table-border-color: white !default;
+$table-border-width: 2px !default;
+$table-heading-align: center !default;
+$table-data-align: center !default;
+$table-even-row-background-color: #eee !default;
+$table-odd-row-background-color: #ccc !default;
+$table-heading-padding: 6px !default;
+$table-data-padding: 6px !default;
+$table-heading-color: white !default;
+$table-data-color: black !default;
+$table-heading-font-size: 12px !default;
+$table-data-font-size: 12px !default;
 .table {
     width: 100%;
     max-width: 100%;
@@ -27,20 +33,22 @@ $table-odd-row-background-color: #ccc;
 }
 
 .table th {
-    padding: 6px;
+    padding: $table-heading-padding;
     border: $table-border-width solid $table-border-color;
     text-align: $table-heading-align;
     background: $table-header-background-color;
-    color: white;
+    color: $table-heading-color;
     letter-spacing: 2px;
-    font-size: 12px;
+    font-size: $table-heading-font-size;
     text-transform: uppercase;
 }
 
 .table td {
-    padding: 6px;
+    padding: $table-data-padding;
     border: $table-border-width solid $table-border-color;
     text-align: $table-data-align;
+    color: $table-data-color;
+    font-size: $table-data-font-size;
 }
 
 .table tbody tr:nth-child(odd) {

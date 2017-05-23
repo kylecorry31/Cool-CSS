@@ -189,7 +189,9 @@ footer p {
 .table td {
   padding: 6px;
   border: 2px solid white;
-  text-align: center; }
+  text-align: center;
+  color: black;
+  font-size: 12px; }
 
 .table tbody tr:nth-child(odd) {
   background-color: #ccc; }
