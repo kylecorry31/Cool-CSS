@@ -1,0 +1,13 @@
+$hero-height: 360px;
+$hero-width: 100%;
+$hero-background: rgba(0, 0, 0, 0.2);
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: $hero-width;
+    height: $hero-height;
+    background: $hero-background;
+}

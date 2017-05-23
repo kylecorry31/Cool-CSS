@@ -1,0 +1,31 @@
+$bottom-border-size: 1px;
+$bottom-border-color: rgba(86, 86, 86, 0.15);
+$font-stack: Helvetica,
+Arial,
+sans-serif;
+@import "hero";
+@import "full-header";
+@import "navbar";
+@import "buttons";
+@import "footer";
+@import "layout-grid/mdc-layout-grid";
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.border-bottom {
+    border-bottom: $bottom-border-size solid $bottom-border-color;
+}
+
+a {
+    color: #00a3ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #005280;
+}

@@ -1,0 +1,18 @@
+$footer-background-color: white;
+$footer-padding: 16px;
+$footer-font-size: 12px;
+$footer-font-color: rgba(0, 0, 0, 0.6);
+$footer-font-stack: $font-stack;
+footer {
+    background-color: $footer-background-color;
+    padding: $footer-padding;
+}
+
+footer p {
+    font-size: $footer-font-size;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $footer-font-stack;
+    color: $footer-font-color;
+}

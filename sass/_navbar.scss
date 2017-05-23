@@ -1,0 +1,92 @@
+$navbar-width: 100%;
+$navbar-min-height: 64px;
+$navbar-font-size: 16px;
+$navbar-font-color: #bbb;
+$navbar-font-color-hover: #888;
+$navbar-font-color-current: black;
+$navbar-fancy-font-size: 12px;
+$navbar-fancy-border-color: #888;
+$navbar-fancy-line-height: 1.6em;
+$navbar-font-stack: $font-stack;
+$navbar-fancy-font-stack: $font-stack;
+$navbar-background-color: transparent;
+$navbar-link-location: space-between;
+$navbar-link-margin: 24px;
+$navbar-direction: row wrap;
+$navbar-title-font-size: 24px;
+$navbar-title-font-color: black;
+.navbar {
+    background-color: $navbar-background-color;
+    z-index: 1;
+    width: $navbar-width;
+    min-height: $navbar-min-height;
+    display: flex;
+    align-items: center;
+    justify-content: $navbar-link-location;
+    flex-flow: $navbar-direction;
+}
+
+.navbar-column {
+    flex-flow: column;
+}
+
+.navbar a {
+    text-transform: uppercase;
+    text-align: center;
+    color: $navbar-font-color;
+    font-size: $navbar-font-size;
+    line-height: $navbar-min-height;
+    text-decoration: none;
+    display: block;
+    margin-right: $navbar-link-margin;
+    margin-left: $navbar-link-margin;
+    font-family: $navbar-font-stack;
+}
+
+.navbar-column a {
+    margin-top: $navbar-link-margin;
+    margin-bottom: $navbar-link-margin;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: $navbar-font-color-hover !important;
+}
+
+.navbar .navbar-current {
+    color: $navbar-font-color-current !important;
+    font-weight: bold;
+}
+
+.navbar .navbar-title {
+    font-size: $navbar-title-font-size;
+    padding-right: 4 * $navbar-link-margin;
+    justify-content: flex-start;
+    color: $navbar-title-font-color;
+    &:hover {
+        border-color: transparent;
+        color: $navbar-title-font-color !important;
+    }
+}
+
+.navbar-column .navbar-title {
+    padding: 0;
+}
+
+.navbar-fancy a {
+    line-height: $navbar-fancy-line-height;
+    height: $navbar-fancy-line-height;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: $navbar-fancy-font-stack;
+    font-size: $navbar-fancy-font-size;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-fancy a:hover {
+    border-bottom: 2px solid $navbar-fancy-border-color;
+}

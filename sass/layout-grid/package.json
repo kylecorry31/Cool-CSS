@@ -1,0 +1,77 @@
+{
+  "name": "@material/layout-grid",
+  "version": "0.1.2",
+  "description": "The Material Components for the web layout grid component",
+  "license": "Apache-2.0",
+  "keywords": [
+    "material components",
+    "material design",
+    "grid",
+    "layout"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "_id": "@material/layout-grid@0.1.2",
+  "scripts": {},
+  "_shasum": "c19d69e3a8ff9f0949528e1c7fe2ab4fda492c7b",
+  "_from": "@material/layout-grid@latest",
+  "_npmVersion": "3.10.10",
+  "_nodeVersion": "7.2.1",
+  "_npmUser": {
+    "name": "yeelan0319",
+    "email": "yiranmao@gmail.com"
+  },
+  "dist": {
+    "shasum": "c19d69e3a8ff9f0949528e1c7fe2ab4fda492c7b",
+    "tarball": "https://registry.npmjs.org/@material/layout-grid/-/layout-grid-0.1.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "amsheehan",
+      "email": "alex.m.sheehan@gmail.com"
+    },
+    {
+      "name": "bwobrien",
+      "email": "obrien.test@gmail.com"
+    },
+    {
+      "name": "cristobalchao",
+      "email": "cchao87@gmail.com"
+    },
+    {
+      "name": "ljepsen3541",
+      "email": "ljepsen3541@gmail.com"
+    },
+    {
+      "name": "material-admin",
+      "email": "traviskaufman+npm@google.com"
+    },
+    {
+      "name": "sgomes",
+      "email": "mail@sgomes.io"
+    },
+    {
+      "name": "traviskaufman",
+      "email": "travis.kaufman@gmail.com"
+    },
+    {
+      "name": "yeelan0319",
+      "email": "yiranmao@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/layout-grid-0.1.2.tgz_1494865565662_0.6797535645309836"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/@material/layout-grid/-/layout-grid-0.1.2.tgz"
+}
