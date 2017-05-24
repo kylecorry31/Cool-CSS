@@ -16,85 +16,114 @@ $navbar-direction: row wrap !default;
 $navbar-title-font-size: 24px !default;
 $navbar-title-font-color: black !default;
 $navbar-link-location: flex-end !default;
+$dropdown-background-color: rgba(255, 255, 255, 0.2) !default;
+$dropdown-min-width: 160px !default;
+$dropdown-padding: 12px 16px !default;
+$dropdown-text-align: left !default;
+$dropdown-font-color: $navbar-font-color !default;
+$dropdown-font-color-hover: $navbar-font-color-hover !default;
+
 .navbar {
-    background-color: $navbar-background-color;
-    z-index: 1;
-    width: $navbar-width;
-    min-height: $navbar-min-height;
-    display: flex;
-    align-items: center;
-    justify-content: $navbar-content-location;
-    flex-flow: $navbar-direction;
+  background-color: $navbar-background-color;
+  z-index: 1;
+  width: $navbar-width;
+  min-height: $navbar-min-height;
+  display: flex;
+  align-items: center;
+  justify-content: $navbar-content-location;
+  flex-flow: $navbar-direction;
 }
 
 .navbar-column {
-    flex-flow: column;
+  flex-flow: column;
 }
 
 .navbar a {
-    text-transform: uppercase;
-    text-align: center;
-    color: $navbar-font-color;
-    font-size: $navbar-font-size;
-    line-height: $navbar-min-height;
-    text-decoration: none;
-    display: block;
-    margin-right: $navbar-link-margin;
-    margin-left: $navbar-link-margin;
-    font-family: $navbar-font-stack;
+  text-transform: uppercase;
+  text-align: center;
+  color: $navbar-font-color;
+  font-size: $navbar-font-size;
+  line-height: $navbar-min-height;
+  text-decoration: none;
+  display: block;
+  margin-right: $navbar-link-margin;
+  margin-left: $navbar-link-margin;
+  font-family: $navbar-font-stack;
 }
 
 .navbar-column a {
-    margin-top: $navbar-link-margin;
-    margin-bottom: $navbar-link-margin;
-    margin-right: 0;
-    margin-left: 0;
-    width: 100%;
+  margin: $navbar-link-margin 0;
+  width: 100%;
 }
 
 .navbar a:hover {
-    color: $navbar-font-color-hover !important;
+  color: $navbar-font-color-hover !important;
 }
 
 .navbar .navbar-current {
-    color: $navbar-font-color-current !important;
-    font-weight: bold;
+  color: $navbar-font-color-current !important;
+  font-weight: bold;
 }
 
 .navbar .navbar-title {
-    font-size: $navbar-title-font-size;
-    padding-right: 4 * $navbar-link-margin;
-    color: $navbar-title-font-color;
-    fkex-grow: 1;
-    &:hover {
-        border-color: transparent;
-        color: $navbar-title-font-color !important;
-    }
+  font-size: $navbar-title-font-size;
+  padding-right: 4 * $navbar-link-margin;
+  color: $navbar-title-font-color;
+  fkex-grow: 1;
+
+  &:hover {
+    border-color: transparent;
+    color: $navbar-title-font-color !important;
+  }
 }
 
 .navbar-links {
-    display: flex;
-    align-content: center;
-    justify-content: $navbar-link-location;
-    flex-grow: 1;
+  display: flex;
+  align-content: center;
+  justify-content: $navbar-link-location;
+  flex-grow: 1;
 }
 
 .navbar-column .navbar-title {
-    padding: 0;
+  padding: 0;
 }
 
 .navbar-fancy a {
-    line-height: $navbar-fancy-line-height;
-    min-height: $navbar-fancy-line-height;
-    letter-spacing: 2px;
-    display: inline-block;
-    font-weight: 600;
-    text-decoration: none;
-    font-family: $navbar-fancy-font-stack;
-    font-size: $navbar-fancy-font-size;
-    border-bottom: 2px solid transparent;
+  line-height: $navbar-fancy-line-height;
+  min-height: $navbar-fancy-line-height;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: $navbar-fancy-font-stack;
+  font-size: $navbar-fancy-font-size;
+  border-bottom: 2px solid transparent;
 }
 
 .navbar-fancy a:hover {
-    border-bottom: 2px solid $navbar-fancy-border-color;
+  border-bottom: 2px solid $navbar-fancy-border-color;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  // Shadow from MDC Elevation (css/elevation/mdc-elevation.min.css)
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+  display: none;
+  position: absolute;
+  background-color: $dropdown-background-color;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-padding;
+  text-align: $dropdown-text-align;
+  z-index: 2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover > a {
+  color: #1c1c1c !important;
 }
