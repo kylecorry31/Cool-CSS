@@ -123,7 +123,6 @@ $dropdown-line-height: $navbar-min-height !default;
   background-color: $dropdown-background-color;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding;
-  text-align: $dropdown-text-align;
   z-index: 2;
 }
 
@@ -138,6 +137,7 @@ $dropdown-line-height: $navbar-min-height !default;
 .dropdown-content a {
   color: $dropdown-font-color;
   display: block;
+  text-align: $dropdown-text-align !important;
 }
 
 .dropdown-content a:hover {
