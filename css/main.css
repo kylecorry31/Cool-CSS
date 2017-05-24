@@ -87,6 +87,10 @@
   font-size: 12px;
   border-bottom: 2px solid transparent; }
 
+.dropdown-content a {
+  line-height: 64px;
+  min-height: 64px; }
+
 .navbar-fancy a:hover {
   border-bottom: 2px solid #888; }
 
@@ -107,7 +111,14 @@
   display: block; }
 
 .dropdown:hover > a {
-  color: #1c1c1c !important; }
+  color: #888 !important; }
+
+.dropdown-content a {
+  color: #bbb;
+  display: block; }
+
+.dropdown-content a:hover {
+  color: #888 !important; }
 
 .button {
   padding: 13px 26px;

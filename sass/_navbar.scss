@@ -22,6 +22,7 @@ $dropdown-padding: 12px 16px !default;
 $dropdown-text-align: left !default;
 $dropdown-font-color: $navbar-font-color !default;
 $dropdown-font-color-hover: $navbar-font-color-hover !default;
+$dropdown-line-height: $navbar-min-height !default;
 
 .navbar {
   background-color: $navbar-background-color;
@@ -100,6 +101,12 @@ $dropdown-font-color-hover: $navbar-font-color-hover !default;
   border-bottom: 2px solid transparent;
 }
 
+.dropdown-content a {
+  line-height: $dropdown-line-height;
+  min-height:$dropdown-line-height;
+
+}
+
 .navbar-fancy a:hover {
   border-bottom: 2px solid $navbar-fancy-border-color;
 }
@@ -125,5 +132,14 @@ $dropdown-font-color-hover: $navbar-font-color-hover !default;
 }
 
 .dropdown:hover > a {
-  color: #1c1c1c !important;
+  color: $navbar-font-color-hover !important;
+}
+
+.dropdown-content a {
+  color: $dropdown-font-color;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: $dropdown-font-color-hover !important;
 }
