@@ -7,6 +7,7 @@ $button-background-color: white !default;
 $button-hover-font-color: white !default;
 $button-hover-background-color: black !default;
 $button-ghost-hover-font-color: white !default;
+$button-letter-spacing: 3px !default;
 .button {
     padding: $button-padding-top-bottom $button-padding-left-right;
     font-size: $button-font-size;
@@ -19,7 +20,7 @@ $button-ghost-hover-font-color: white !default;
     margin: $button-margin;
     background-color: $button-background-color;
     border-radius: 2px;
-    letter-spacing: 3px;
+    letter-spacing: $button-letter-spacing;
     &:hover {
         background-color: $button-hover-background-color;
         color: $button-hover-font-color;
