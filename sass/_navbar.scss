@@ -9,30 +9,44 @@ $navbar-fancy-border-color: #888 !default;
 $navbar-fancy-line-height: 1.6em !default;
 $navbar-font-stack: $font-stack !default;
 $navbar-fancy-font-stack: $font-stack !default;
-$navbar-background-color: transparent !default;
+$navbar-background-color: white !default;
 $navbar-content-location: space-between !default;
 $navbar-link-margin: 24px !default;
+$navbar-large-link-margin: 0 !default;
 $navbar-direction: row wrap !default;
 $navbar-title-font-size: 24px !default;
 $navbar-title-font-color: black !default;
 $navbar-link-location: flex-end !default;
-$dropdown-background-color: rgba(255, 255, 255, 0.2) !default;
+$dropdown-background-color: white !default;
 $dropdown-min-width: 160px !default;
 $dropdown-padding: 12px 16px !default;
 $dropdown-text-align: left !default;
 $dropdown-font-color: $navbar-font-color !default;
 $dropdown-font-color-hover: $navbar-font-color-hover !default;
-$dropdown-line-height: $navbar-min-height !default;
+$navbar-line-height: $navbar-min-height !default;
+$dropdown-line-height: $navbar-line-height !default;
+$navbar-max-width: 100% !default;
+$navbar-side-margin: 0 !default;
+$navbar-large-link-padding: 21px !default;
+$navbar-large-border-color: orange !default;
+$navbar-large-dropdown-background-highlight: #eaeaea !default;
 
 .navbar {
   background-color: $navbar-background-color;
-  z-index: 1;
+  z-index: 5;
   width: $navbar-width;
+  max-width: $navbar-max-width;
   min-height: $navbar-min-height;
   display: flex;
   align-items: center;
   justify-content: $navbar-content-location;
   flex-flow: $navbar-direction;
+  margin-left: $navbar-side-margin;
+  margin-right: $navbar-side-margin;
+}
+
+.navbar-large {
+  justify-content: center;
 }
 
 .navbar-column {
@@ -44,12 +58,33 @@ $dropdown-line-height: $navbar-min-height !default;
   text-align: center;
   color: $navbar-font-color;
   font-size: $navbar-font-size;
-  line-height: $navbar-min-height;
+  line-height: $navbar-line-height;
   text-decoration: none;
   display: block;
   margin-right: $navbar-link-margin;
   margin-left: $navbar-link-margin;
   font-family: $navbar-font-stack;
+}
+
+.navbar-large a {
+  flex-grow: 1;
+  padding: $navbar-large-link-padding 0;
+  margin-right: $navbar-large-link-margin;
+  margin-left: $navbar-large-link-margin;
+}
+
+.navbar-large>a, .navbar-large .dropdown>a {
+  display: inline-block;
+  border-bottom: 5px solid transparent;
+}
+
+.navbar-large .dropdown {
+  flex-grow: 1;
+  position: relative;
+}
+
+.navbar-large>a:hover, .navbar-large .dropdown:hover>a {
+  border-bottom: 5px solid $navbar-large-border-color;
 }
 
 .navbar-column a {
@@ -101,10 +136,10 @@ $dropdown-line-height: $navbar-min-height !default;
   border-bottom: 2px solid transparent;
 }
 
+
 .dropdown-content a {
   line-height: $dropdown-line-height;
-  min-height:$dropdown-line-height;
-
+  min-height: $dropdown-line-height;
 }
 
 .navbar-fancy a:hover {
@@ -123,7 +158,7 @@ $dropdown-line-height: $navbar-min-height !default;
   background-color: $dropdown-background-color;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding;
-  z-index: 2;
+  z-index: 10;
 }
 
 .dropdown:hover .dropdown-content {
@@ -142,4 +177,28 @@ $dropdown-line-height: $navbar-min-height !default;
 
 .dropdown-content a:hover {
   color: $dropdown-font-color-hover !important;
+}
+
+.navbar-large .dropdown-content {
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-large .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar-large .dropdown>a {
+  width: 100%;
+}
+
+.navbar-large .dropdown-content a {
+  display: block;
+  border-bottom: 2px solid $navbar-large-dropdown-background-highlight;
+  text-align: center !important;
+}
+
+.navbar-large .dropdown-content a:hover {
+  border-bottom: 2px solid $navbar-large-dropdown-background-highlight;
+  background-color: $navbar-large-dropdown-background-highlight;
 }
